@@ -14,7 +14,7 @@ public class PrimeSummations {
 
     public static int[] primeSummationNumbers(int n){
         int[] dp = new int[n+1];
-        // dp[i] holds 'How many different ways to write i as the sum of {x | x<=p, x is a prime}'
+        // dp[i] holds 'How many different ways are possible to write i as the sum of {x | x<=p, x is a prime}'
         for(int p : new Primes(n)){
             dp[p] +=1;
             for(int i=p+1; i<dp.length; i++){
